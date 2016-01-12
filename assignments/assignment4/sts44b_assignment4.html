@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 4</title>
+	</head>
+	<body>
+		<form action="#" method="GET">
+			<!-- Text Input - with placeholder of "Enter Name"-->
+			<div>
+				<input type="text" name="name" id="name" placeholder="Enter Name">
+			</div>
+		
+			<!-- Radio Buttons - colors with orange as the default selection -->
+			<h3>What is your favorite color?</h3>
+			<div>
+				<input type="radio" name="color" id="orange" value="orange" checked>
+				<label for="orange">Orange</label>
+			</div>
+			<div>
+				<input type="radio" name="color" id="red" value="red">
+				<label for="red">Red</label>
+			</div>
+			<div>
+				<input type="radio" name="color" id="blue" value="blue">
+				<label for="blue">Blue</label>
+			</div>
+			<div>
+				<input type="radio" name="color" id="green" value="green">
+				<label for="green">Green</label>
+			</div>
+			<div>
+				<input type="radio" name="color" id="other" value="other">
+				<label for="other">Other</label>
+			</div>
+
+			<br>
+
+			<h3>Where are you located?</h3>
+			<!-- Dropdown Menu - location with Columbia as the default location-->
+			<div>
+				 <select>
+				 	<option value="denver">Denver</option>
+  					<option value="stl">St. Louis</option>
+  					<option selected="selected" value="columbia">Columbia</option>
+ 					<option value="atlanta">Atlanta</option>
+  					<option value="chicago">Chicago</option>
+				</select> 
+			</div>
+			
+			<br>
+
+			<!-- Submit Button to submit the form-->
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

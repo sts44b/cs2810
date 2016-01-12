@@ -1,0 +1,164 @@
+<!doctype html> 
+<!-- 
+    Make sure you include the mandatory HTML5 tags.
+    Use internal CSS in the head of the document. Do not use inline styles!
+    Use a single table; don't nest multiple tables within one another.
+    In class, we used the colspan attribute to make a th tag stretch across the width of the table. For this project, you'll need to look up the attribute used to stretch across rows.
+    The padding in each cell of the table is 5px.
+    Remember to center the text in the "Credits" column.
+    The font size is 16pt.
+
+	Here's information on the background colors:
+
+    The <th> "Students" has a black background with white text.
+    The other <th> tags ("Name", "Course Title", "Course #", and "Credits") have a light green background: #ccffcc.
+    Even rows are colored light blue: #ccccff. Rows are defined by a name, so "Burns, Tony" and "Eagans, Kerri" are light blue.
+    Each "Credits" cell with a value of 5 or 6 is highlighted light red: #ffcccc.
+-->
+
+<html>
+<head>
+	<title>Assignment 3</title>
+	<style>
+	table#studentTable td, table#studentTable th {
+		border: 1px solid black;
+		padding: 5px;
+		font-size: 16pt;
+	}
+
+	table#studentTable{
+		margin: auto;
+		border-collapse: collapse;
+	}
+
+	#studentTable #tableTitle{
+		background-color: black;
+		color: white;
+	}
+	
+	#studentTable .even{
+		background-color: #ccccff;
+	}
+
+	#studentTable .odd{
+		background-color: white;
+	}
+	
+	#studentTable .credits {
+		text-align: center;
+	}
+
+	#studentTable #columnTitles{
+		background-color: #ccffcc;
+	}
+
+	.emphasize {
+		background-color: #ffcccc;
+	}
+
+	#wrapper{
+		width: 600px;
+		margin: auto;
+	}
+
+	body {
+		/*background-color: black;*/
+		group:before,
+		.group:after{
+    		content: "";
+    		display: table;
+		} 
+		.group:after{
+    		clear: both;
+		}
+		.group {
+    		zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+		}
+	}
+
+	</style>
+
+</head>
+<body>
+	<div id="wrapper">
+	<table id="studentTable">
+		<tr>
+			<th colspan="4" id="tableTitle">Students</th>
+		</tr>
+		<tr id="columnTitles">
+			<th>Name</th>
+			<th>Course Title</th>
+			<th>Course #</th>
+			<th>Credits</th>
+		</tr>
+		<tr class="odd">
+			<td rowspan = "3" class = "name">Andrews, Samantha</td>
+			<td class = "courseTitle">Calculus I</td>
+			<td class="courseNum">Math 1500</td>
+			<td class="credits">3</td>
+		</tr>
+		<tr class = "odd">
+			<td class = "courseTitle">German Lit I</td>
+			<td class="courseNum">Ger 3500</td>
+			<td class="credits">3</td>
+		</tr>
+		<tr class = "odd">
+			<td class = "courseTitle">Genomics II</td>
+			<td class="courseNum">Bio 3100</td>
+			<td class="credits emphasize">6</td>
+		</tr>
+
+		<tr class="even">
+			<td rowspan = "4" class = "name">Burns, Tony</td>
+			<td class = "courseTitle">Intro to Rhyming</td>
+			<td class="courseNum">English 1700</td>
+			<td class="credits">2</td>
+		</tr>
+		<tr class = "even">
+			<td class = "courseTitle">Dead Poets II</td>
+			<td class="courseNum">Eng 2100</td>
+			<td class="credits">2</td>
+		</tr>
+		<tr class = "even">
+			<td class = "courseTitle">Creative Writing</td>
+			<td class="courseNum">English 2700</td>
+			<td class="credits">3</td>
+		</tr>
+		<tr class = "even">
+			<td class = "courseTitle">Philosophy of Kant</td>
+			<td class="courseNum">Phil 3800</td>
+			<td class="credits emphasize">5</td>
+		</tr>
+
+		<tr class="odd">
+			<td rowspan = "3" class = "name">Collins, Beth</td>
+			<td class = "courseTitle">Circuit Analysis II</td>
+			<td class="courseNum">EE 2100</td>
+			<td class="credits">3</td>
+		</tr>
+		<tr class = "odd">
+			<td class = "courseTitle">Electromagnetics I</td>
+			<td class="courseNum">Phys 2300</td>
+			<td class="credits emphasize">5</td>
+		</tr>
+		<tr class = "odd">
+			<td class = "courseTitle">Differential Equations</td>
+			<td class="courseNum">Math 2900</td>
+			<td class="credits">3</td>
+		</tr>
+
+		<tr class="even">
+			<td rowspan = "2" class = "name">Eagans, Kerri</td>
+			<td class = "courseTitle">Digital Video I</td>
+			<td class="courseNum">CS 1600</td>
+			<td class="credits">3</td>
+		</tr>
+		<tr class = "even">
+			<td class = "courseTitle">Web Appication Dev II</td>
+			<td class="courseNum">CS 2300</td>
+			<td class="credits">3</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

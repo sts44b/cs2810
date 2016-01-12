@@ -1,0 +1,73 @@
+<!doctype html> 
+
+<html> 
+
+	<head> 
+		<title>Assignment Two</title> 
+
+		<style>
+			#left{
+				width: 200px;
+				background: red;
+			}
+
+			p#urgent span.message{
+				color: red;
+			}
+
+			#center{
+				width: 300px;
+				background: green;
+			}
+		
+			#right{
+				width: 310px;
+				background: blue;
+			}	
+			
+			#wrapper{
+				width: 900px;
+			}
+
+			.column{
+				padding: 10px;
+				margin: 5px;
+				float: left;
+			}
+		
+			body {
+				group:before,
+				.group:after{
+    				content: "";
+    				display: table;
+				} 
+				.group:after{
+    				clear: both;
+				}
+				.group {
+    				zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+				}
+			}
+
+		</style>
+	</head> 
+
+	<body>
+
+		<div id="wrapper">	
+			<div id="right" class="column">
+
+				<p>Sed sagittis mi in nisl vulputate, eget gravida ex porta. Maecenas efficitur facilisis tortor, eget bibendum tellus imperdiet eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin aliquet libero quis orci mattis tristique. Ut posuere nisi eget dolor pellentesque, a dignissim est eleifend. Maecenas pretium turpis ac sem egestas, nec vehicula risus interdum. Nullam faucibus rutrum justo, sagittis elementum tellus. Sed et tortor interdum, vehicula nisi ac, hendrerit nulla. Phasellus convallis leo vitae mi congue, ut congue erat malesuada. Curabitur placerat vitae sapien tempor efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				
+				<p id="urgent">Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way <span class = "message">blue</span> to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+			</div>
+
+			<div id="center" class ="column">
+				<p id="ok">Integer quis accumsan mi. Donec a mollis sapien. Vestibulum accumsan ante vitae mi maximus sollicitudin. Donec bibendum tellus eget tincidunt faucibus. Phasellus vel metus sit amet velit dapibus fermentum vitae a ante. Suspendisse tincidunt ligula ut tellus ultricies interdum. Etiam in fringilla lorem. Fusce ac sodales leo. <span class = "message">blue</span>Etiam sollicitudin sem nec posuere elementum. Sed quis nisi blandit, egestas orci vitae, feugiat nunc. Vestibulum eleifend sagittis turpis, non viverra sem hendrerit ac. Duis molestie quam sapien, at interdum tellus rutrum fringilla. Aliquam erat volutpat. Suspendisse sed lorem pretium libero euismod ornare.</p>
+			</div>
+
+			<div id="left" class="column">Nulla tempus felis nisi. Fusce pulvinar gravida ex, eget sodales dui tristique eu. Fusce id consequat ligula. In gravida tristique mi, et commodo felis. Aliquam porta elementum lobortis. Praesent eleifend mi vitae mi gravida, non accumsan tortor vulputate. Nam tristique massa est, ut dictum purus efficitur non. Aenean ut erat porttitor, tristique erat at, vehicula velit. Proin sagittis felis nec mauris hendrerit, non maximus arcu aliquet. Sed fermentum at ligula bibendum condimentum. Fusce vestibulum molestie tellus sodales finibus. Maecenas elit nisl, ullamcorper vel maximus eu, efficitur sed elit. Mauris consequat sapien vel fermentum dictum. Curabitur rutrum ultricies velit, quis interdum ligula feugiat ac. </div>
+		</div>
+	</body> 
+
+</html>

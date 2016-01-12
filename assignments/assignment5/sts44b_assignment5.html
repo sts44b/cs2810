@@ -1,0 +1,121 @@
+<!doctype html> 
+
+<html> 
+
+	<head> 
+		<title>Assignment Five</title> 
+		<script src="jquery-1.11.1.min.js"></script>
+
+		<script>
+		function clearTextarea() {
+			var textareaObject1 = document.getElementById('CSS');
+			var textareaObject2 = document.getElementById('HTML');
+		
+			textareaObject1.value = null;
+			textareaObject2.value = null;
+
+
+			$('#output').empty();
+
+		}
+
+		var i = 1;
+		function toggle(){
+
+			if (i==1){
+				applyCSS();
+				i=0;
+			}
+
+			else{
+				launchCode();
+				i=1;
+			}
+
+		
+		}
+
+		function launchCode() {
+			var htmlString = document.getElementById('HTML');
+			$('#output').html(htmlString.value);
+			
+		}
+
+
+
+		function applyCSS() {	
+			
+
+			var cssCode = document.getElementById('CSS');
+			$('#output').append('<style>' + cssCode.value + '</style>');
+
+		}
+
+		</script>
+		<style>
+			#wrapper{
+				float:left;
+				width: 45%;
+			}
+
+
+			#CSS{
+				border: 1px solid silver;
+				width: 90%;
+			}
+
+			#HTML{
+				border: 1px solid silver;
+				width: 90%;	
+			}
+
+			#output{
+				float: left;
+				width: 45%;
+				height: 500px;
+				padding: 0px;
+				border: 1px solid silver;
+			}
+
+			body{
+
+				.group:before,.group:after{
+					content:"";
+					display:table;
+				}
+				.group:after {
+					clear:both;
+				}
+
+				.group {
+					zoom:1; /* For IE 6/7 (trigger hasLayout) */
+				}
+			}	
+
+		</style>
+
+	</head> 
+
+	<body>
+		<form action-"#" method="POST">
+			<div id="wrapper">
+				<div class="group">
+					<textarea name="code" id="CSS" rows="20" placeholder="CSS"></textarea>
+				</div>
+
+				<div class="group">
+					<textarea name="code" id="HTML" rows="20" placeholder="HTML"></textarea>
+				</div>
+		
+				<div>
+					<button type="button" onclick="launchCode()">Launch</button>
+					<button type="button" onclick="clearTextarea()">Clear</button>
+					<button type="button" onclick="toggle()">Toggle</button>
+				</div>	
+			</div>
+
+			<div id="output" class="group"></div>
+	</form>
+	</body> 
+
+</html>
